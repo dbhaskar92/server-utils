@@ -111,6 +111,8 @@ matlabdbgui() { /home/dbhaskar92/matlab/bin/matlab -nosplash }
 
 combine-pdf() { gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=combinedpdf_`date +'%F_%Hh%M'`.pdf -f "$@" ;}
 
+extract-pdf() { gs -q -o $(basename ${1:r})_p%03d.jpeg -sDEVICE=jpeg -dJPEGQ=100 -r300 "${1}"; }
+
 cellprofilerdb() { python /home/dbhaskar92/CellProfiler/CellProfiler.py -b --do-not-fetch }
 
 archey
