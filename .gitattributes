@@ -1,0 +1,2 @@
+.zshrc filter=git-crypt diff=git-crypt
+iptables_reset.sh filter=git-crypt diff=git-crypt
